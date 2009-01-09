@@ -5,8 +5,8 @@ f:RegisterEvent("MERCHANT_CLOSED")
 
 -- UTILITY
 
-function f:Print(msg) ChatFrame1:AddMessage(msg); end
-function f:PrintF(fmsg, ...) ChatFrame1:AddMessage(string.format("|cFF33FF99Receipt|r "..fmsg, ...)); end
+local function Print(msg) ChatFrame1:AddMessage(msg); end
+local function PrintF(fmsg, ...) ChatFrame1:AddMessage(string.format("|cFF33FF99Receipt|r "..fmsg, ...)); end
 
 --[[  FormatMoney is a slight modification of code snippet by Tekkub
       (http://tekkub.net) which was posted at 
@@ -25,10 +25,10 @@ local function FormatMoney(money)
 end
 
 function f:MERCHANT_SHOW()
-  self:Print("MERCHANT_SHOW")
+  Print("MERCHANT_SHOW")
   local money = GetMoney()
-  self:Print(money)
-  self:PrintF("%s", FormatMoney(money))
+  Print(money)
+  PrintF("%s", FormatMoney(money))
 end
 
 function f:MERCHANT_CLOSED()
