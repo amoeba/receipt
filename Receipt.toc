@@ -1,0 +1,11 @@
+## Interface: 30000
+
+## Title: Receipt
+## Notes: Display change in cash after each vendor session
+## Author: amoeba
+## Version: r00
+## X-Website: http://bryced.com
+## X-Email: petridish@gmail.com
+## X-Category: Misc
+
+Receipt.lua
