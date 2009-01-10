@@ -30,13 +30,15 @@ end
 f:SetScript("OnEvent", function(self, event, ...)
   if event == "MERCHANT_SHOW" or 
   event == "TRAINER_SHOW" or 
-  event == "TAXIMAP_OPENED" then
+  event == "TAXIMAP_OPENED" or
+  event == "AUCTION_HOUSE_SHOW" then
     money_initial = GetMoney()
   end
   
   if event == "MERCHANT_CLOSED" or 
   event == "TRAINER_CLOSED" or 
-  event == "TAXIMAP_CLOSED" then 
+  event == "TAXIMAP_CLOSED" or 
+  event == "AUCTION_HOUSE_CLOSED" then 
     local delta = GetMoney() - money_initial
     
     if delta == 0 then return
@@ -54,4 +56,5 @@ f:RegisterEvent("TAXIMAP_OPENED")
 f:RegisterEvent("TAXIMAP_CLOSED")
 f:RegisterEvent("TRAINER_SHOW")
 f:RegisterEvent("TRAINER_CLOSED")
-
+f:RegisterEvent("AUCTION_HOUSE_SHOW")
+f:RegisterEvent("AUCTION_HOUSE_CLOSED")
