@@ -9,6 +9,9 @@
 ## X-Category: Misc
 ## X-Credits: tekkub
 
+## LoadManagers: AddonLoader
+## X-LoadOn-Always: delayed
+
 libStub.lua
 tekKonfigAboutPanel.lua
 
