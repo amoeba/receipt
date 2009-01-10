@@ -3,9 +3,13 @@
 ## Title: Receipt
 ## Notes: Display change in cash after each vendor session
 ## Author: amoeba
-## Version: r00
+## Version: 1.0.0.0
 ## X-Website: http://bryced.com
 ## X-Email: petridish@gmail.com
 ## X-Category: Misc
+## X-Credits: tekkub
+
+libStub.lua
+tekKonfigAboutPanel.lua
 
 Receipt.lua

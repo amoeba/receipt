@@ -1,4 +1,7 @@
 local f = CreateFrame("frame")
+local about = LibStub("tekKonfig-AboutPanel").new(nil, "Receipt")
+
+
 f:SetScript("OnEvent", function(self, event, ...) if self[event] then return self[event](self, event, ...) end end)
 f:RegisterEvent("MERCHANT_SHOW")
 f:RegisterEvent("MERCHANT_CLOSED")
