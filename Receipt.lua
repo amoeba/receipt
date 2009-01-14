@@ -30,16 +30,18 @@ end
 f:SetScript("OnEvent", function(self, event, ...)
   if event == "MERCHANT_SHOW" or 
   event == "TRAINER_SHOW" or 
-  event == "AUCTION_HOUSE_SHOW" then
+  event == "AUCTION_HOUSE_SHOW" or
+  event == "MAIL_SHOW" then
     money_initial = GetMoney()
   end
   
   if event == "MERCHANT_CLOSED" or 
   event == "TRAINER_CLOSED" or 
-  event == "AUCTION_HOUSE_CLOSED" then
+  event == "AUCTION_HOUSE_CLOSED" or
+  event == "MAIL_CLOSED" then
     local delta = GetMoney() - money_initial
 
-    if delta == 0 then --[[return]]PrintF("delta => %s", delta)
+    if delta == 0 then return
     elseif delta > 0 then PrintF("You earned %s", FormatMoney(delta))
     else PrintF("You spent %s", FormatMoney(delta)) end
   
@@ -54,3 +56,5 @@ f:RegisterEvent("TRAINER_SHOW")
 f:RegisterEvent("TRAINER_CLOSED")
 f:RegisterEvent("AUCTION_HOUSE_SHOW")
 f:RegisterEvent("AUCTION_HOUSE_CLOSED")
+f:RegisterEvent("MAIL_SHOW")
+f:RegisterEvent("MAIL_CLOSED")
