@@ -18,8 +18,8 @@ local function FormatMoney(money)
   local money = abs(money)
   local g, s, c = floor(money/10000), floor((money/100)%100), money%100
 
-  if g > 0 then return string.format("|cffffd700%dg|cffc7c7cf%02ds|cffeda55f%02dc", g, s, c)
-  elseif s > 0 then return string.format("|cffc7c7cf%ds|cffeda55f%02dc", s, c)
+  if g > 0 then return string.format("|cffffd700%dg|cffc7c7cf%ds|cffeda55f%dc", g, s, c)
+  elseif s > 0 then return string.format("|cffc7c7cf%ds|cffeda55f%dc", s, c)
   else return string.format("|cffeda55f%dc", c) end
 end
 
